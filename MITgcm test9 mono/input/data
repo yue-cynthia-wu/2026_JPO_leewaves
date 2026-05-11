@@ -1,0 +1,66 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ viscAh=.1,
+ diffKhT=.1,
+ viscAz=.0001,
+ diffKzT=.0001,
+ implicitDiffusion=.TRUE.,
+ implicitViscosity=.TRUE.,
+ 
+ freeSurfFac=1,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+
+ selectCoriMap=0,
+ f0=1.3E-4,
+ beta=0.,
+
+ rhoNil=1027,
+ sBeta=0,
+ saltStepping=.FALSE.,
+ saltAdvection=.FALSE.,
+
+ staggerTimeStep=.TRUE.,
+ hFacMin=0.1,
+ nonHydrostatic=.FALSE.,
+ momForcing=.FALSE.,
+ momTidalForcing=.FALSE.,
+
+ readBinaryPrec=32,
+ writeBinaryPrec=32,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ &
+
+# Time stepping parameters
+ &PARM03
+ deltaT=60.,
+ dumpFreq=86400.,
+ endTime=1728000.,
+ monitorFreq=8640000.,
+ &
+
+# Gridding parameters
+ &PARM04
+ dXspacing=1.E2,
+ dYspacing=1.E2,
+ delZ=50*40.,
+ interViscAr_pCell=.FALSE',
+ interDiffKr_pCell=.FALSE',
+ &
+
+# Input datasets
+ &PARM05
+ hydrogThetaFile='TEMP.bin',
+ uVelInitFile='U.bin',
+ vVelInitFile='V.bin',
+ bathyFile='BAT.bin',
+#viscAhDfile='ViscAh.bin',
+#viscA4Dfile='ViscAh.bin',
+ &

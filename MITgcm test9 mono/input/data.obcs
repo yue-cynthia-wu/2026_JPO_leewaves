@@ -1,0 +1,35 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OBCSfixTopo=.TRUE.,
+ OB_singleIeast=-1,
+ OB_singleIwest=1,
+ useOBCSprescribe=.TRUE.,
+ useOBCSsponge=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ OBCS_balanceFacN=0.,
+ OBCS_balanceFacS=0.,
+ OBCS_balanceFacW=0.,
+ OBCS_balanceFacE=1.,
+ useOrlanskiWest=.FALSE.,
+ useOrlanskiEast=.FALSE.,
+ OBEtFile='TEMP_B.bin',
+ OBEuFile='U_B.bin',
+ OBEvFile='V_B.bin',
+ OBWtFile='TEMP_B.bin',
+ OBWuFile='U_B.bin',
+ OBWvFile='V_B.bin',
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+ &
+
+# Sponge parameters
+ &OBCS_PARM03
+ spongeThickness=20,
+ Urelaxobcsinner=43200.,
+ Vrelaxobcsinner=43200.,
+ Urelaxobcsbound=3600.,
+ Vrelaxobcsbound=3600.,
+ &
+

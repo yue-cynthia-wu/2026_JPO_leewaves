@@ -1,0 +1,10 @@
+# =====================================================================
+# | Parameters for Pacanowski&Philander (1981) vertical mixing scheme |
+# =====================================================================
+ &KPP_PARM01
+ KPPwriteState=.TRUE.,
+ kpp_dumpFreq=864000.,
+ Riinfty=1.,
+ difm0=.1,
+ dift0=.1,
+ &
